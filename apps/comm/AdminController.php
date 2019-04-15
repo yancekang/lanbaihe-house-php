@@ -1,0 +1,1 @@
+<?php namespace app\comm;use core\basic\Controller; class AdminController extends Controller{ }
