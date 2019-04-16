@@ -1,0 +1,45 @@
+<footer>
+    <img src="{pboot:sitetplpath}/images/bottom-title.png" alt="" class="bottom-title">
+    <p>版权所有©：长沙兰百合科技服务有限公司</p>
+    <div class="bottom-nav">
+      <span class="layui-breadcrumb" lay-separator="|">
+        <a href="">找寻服务</a>
+        <a href="">联系我们</a>
+        <a href="">加盟咨询</a>
+      </span>
+    </div>
+</footer>
+<script src="{pboot:sitetplpath}/layui/layui.js"></script>
+<script type="text/javascript" src="{pboot:sitetplpath}/ckplayer/ckplayer.js"></script>
+<script>
+    layui.use(['element', 'carousel', 'jquery'], function () {
+        var carousel = layui.carousel,
+            element = layui.element,
+            $ = layui.$
+
+        //建造实例
+        carousel.render({
+            elem: '#carousel'
+            , width: '100%' //设置容器宽度
+            , height: '4rem'
+
+            //,anim: 'updown' //切换动画方式
+        });
+
+        $(".teacher-item").hover(function () {
+            $(this).find('.teacher-info').addClass("layui-anim layui-anim-upbit");
+        }, function () {
+            $(this).find('.teacher-info').removeClass("layui-anim layui-anim-upbit");
+        });
+        // 底部学员hover动画高度处理
+        $(".student-item").hover(function () {
+            $(this).find('.student-info .student-text').delay(330).fadeIn('fast').css('height','auto')
+        }, function () {
+            $(this).find('.student-info .student-text').css('height','0.3rem').fadeOut(500)
+        });
+    });
+</script>
+<script src='{pboot:sitetplpath}/js/video.js'></script>
+</body>
+
+</html>

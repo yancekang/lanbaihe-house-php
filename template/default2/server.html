@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>服务内容</title>
+  <meta name="description" content="" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link rel="stylesheet" href="{pboot:sitetplpath}/layui/css/layui.css">
+  <link rel="stylesheet" href="{pboot:sitetplpath}/css/server.css">
+  <script>
+    (function (window, document) {
+      function resize() {
+        var ww = window.innerWidth;
+        if (ww > window.screen.width) {
+          window.requestAnimationFrame(resize);
+        } else {
+          if (ww > 1366) ww = 1366;
+          // 下面代码按照比例为100px = 1rem，此处一定要同pxToRem的转换比例
+          document.documentElement.style.fontSize = ww * 100 / 1366 + 'px';
+        }
+      }
+      if (document.readyState !== 'loading') {
+        resize();
+      } else {
+        document.addEventListener('DOMContentLoaded', resize);
+      }
+      window.addEventListener('resize', resize);
+    })(window, document);
+  </script>
+</head>
+
+<body>
+  <!-- 低版本浏览器提示 -->
+  <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+  <!-- 正文开始 -->
+  {include file=common/top.html}
+  <!-- end top-->
+  <div class="container">
+    <!-- about-us-banner -->
+    <div class="server-banner-box">
+      <span>Service</span>
+      <p>服务内容</p>
+    </div>
+    <div class="server-container">
+      <div class="server-nav">
+        <p class="nav-line"></p>
+        <ul>
+          <li class="nav-title">母婴服务</li>
+          <li>保姆</li>
+          <li>护工</li>
+          <li>保洁</li>
+          <li class="nav-title">家政服务</li>
+          <li>月嫂</li>
+          <li>催乳师</li>
+          <li>育婴师</li>
+          <li class="nav-title">高端家政服务</li>
+          <li class='active'>全屋整理</li>
+          <li>私人订制</li>
+          <li>涉外家政</li>
+        </ul>
+      </div>
+      <div class="server-content">
+
+          衣橱整理师行业随着十三亿中国人对提升着装品位及化妆品位有需求的消费群越来越大，衣橱整理师的市场需求将不断扩大，其特点是投资小、收入高、社会地位高、面向高端顾客群体，目前市场需求呈逐渐扩大趋势，而从业专业人员极为紧缺。
+          衣橱整理师主要工作和任务就是根据客户情况定制整理方案，协助客户解决收纳整理问题。
+          衣橱整理师属自由行业，可全职也可兼职衣橱整理按次收费，根据地域的不同和每次整理衣物数量的多少而异，市场价格在800-3000元/次。著名的职业衣橱整理师一次收费可达2万。
+          衣橱整理师是新兴职业现在全国职业从事的人不超过100位，在中国很多地区都是属于空白市场，而在国外早已经是一个成熟的职业，已经细分到时间整理，资料整理，资产整理，杂物整理，并且在国外这样的一个服务基本在每个家庭都是需要的，而在中国大多数人家里都存在布局不合理，杂物泛滥，被恶劣的环境所困扰，所以非常需要这样的一个服务，但是人们都还不知道有这样的一个服务，有专业人士对中国整理市的预估3年后中国的整理师会蓬勃的发展，在走向成熟，所以现在还在萌芽期，现在走在前面的人相对发展机会也比较大。
+          我们分为个人体提升班和职业衣橱整理班
+          个人提升培训一天，职业培训四天！全日制授课，整个培训以落地式，实践式，实操形式一对一指导培训为主哦！
+          理论与实操相结合，保证您能够学以致用，并且我们提供终身的免费复训服务和终身免费咨询服务，如果您在回去开发客户服务客户或者在做市场遇到什么问题或难题您可以随时跟我们公司哦！我们提供一些列的成熟的指导建议。
+                                  
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  {include file=common/foot.html}

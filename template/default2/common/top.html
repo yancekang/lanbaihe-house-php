@@ -1,0 +1,58 @@
+
+<!-- 低版本浏览器提示 -->
+<!--[if lt IE 7]>
+<p class="browsehappy">
+  You are using an <strong>outdated</strong> browser. Please
+  <a href="#">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+<!-- 正文开始 -->
+<div class="top-box">
+  <div class='top-tips-nav layui-clear'>
+    <div class="hello-text fl"> 欢迎来到兰百合家政～</div>
+    <ul class="layui-nav tip-nav fr" lay-filter="">
+      <li class="layui-nav-item" lay-unselect><a href="">网站地图</a></li>
+      <li class="layui-nav-item" lay-unselect><a href="">收藏本站</a></li>
+      <!--<li class="layui-nav-item" lay-unselect><a href="">在线留言</a></li>-->
+      {pboot:content id=19}
+      <li class="layui-nav-item end-item" lay-unselect>
+        <a href= "[content:link]">[content:title]</a>
+      </li>
+      {/pboot:content}
+    </ul>
+  </div> <!-- end-top-nav -->
+  <hr class="top-line">
+  <div class="top-icon-box">
+    <div class="tel-info-box  box-style">
+      <img src="{pboot:sitetplpath}/images/tel-icon.png" alt="联系电话">
+      <ul class="tel-box">
+        <li class="tel-item">服务热线：<span>0731-83387873</span></li>
+        <li class="tel-item">客户专线：<span>15211039800</span></li>
+      </ul>
+    </div>
+    <div class="logo">
+      <img src="{pboot:sitetplpath}/images/logo.png" alt="logo">
+    </div>
+    <div class="local-info-box box-style">
+      <img src="{pboot:sitetplpath}/images/local-icon.png" alt="联系电话">
+      <ul class="tel-box">
+        <li class="tel-item">长沙市岳麓区银盆南路<br> 20号溁湾镇新外滩</li>
+      </ul>
+    </div>
+  </div>
+  <!-- nav -->
+  <ul class="layui-nav nav-box" lay-filter="">
+    <li class="layui-nav-item {pboot:if(0=='{sort:scode}')} active {/pboot:if}" lay-unselect><a href="/">首页</a></li>
+    {pboot:nav num=10 parent=0}
+    <li class="layui-nav-item {pboot:if('[nav:scode]'=='{sort:tcode}')} active {/pboot:if}" lay-unselect><a href="[nav:link]">[nav:name]</a></li>
+    {/pboot:nav}
+    <!--<li class="layui-nav-item" lay-unselect><a href="">培训项目</a></li>-->
+    <!--<li class="layui-nav-item" lay-unselect>-->
+    <!--<a href="javascript:;">教学视频</a>-->
+    <!--</li>-->
+    <!--<li class="layui-nav-item" lay-unselect><a href="">师资力量</a></li>-->
+    <!--<li class="layui-nav-item" lay-unselect><a href="">学员风采</a></li>-->
+    <!--<li class="layui-nav-item end-item" lay-unselect><a href="{pboot:sitetplpath}/about_us.html">关于我们</a></li>-->
+
+  </ul>
+</div><!-- end top-->
