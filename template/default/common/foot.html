@@ -37,6 +37,23 @@
         }, function () {
             $(this).find('.student-info .student-text').css('height','0.3rem').fadeOut(500)
         });
+        //导航切换
+        var btn = $('.mobile-nav').children('button')
+        ,spa = btn.children('span')
+        ,ul = $('.top-box').children('.layui-nav');
+        btn.on('click', function(){
+            if(!$(spa[0]).hasClass('spa1')){
+            spa[0].className = 'spa1';
+            spa[1].style.display = 'none';
+            spa[2].className = 'spa3';
+            $('.top-box')[0].style.height = 80 + ul[0].offsetHeight + 'px';
+            }else{
+            spa[0].className = '';
+            spa[1].style.display = 'block';
+            spa[2].className = '';
+            $('.top-box')[0].style.height = 70 + 'px';
+            }
+        });
     });
 </script>
 <script src='{pboot:sitetplpath}/js/video.js'></script>

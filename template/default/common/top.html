@@ -41,6 +41,12 @@
     </div>
   </div>
   <!-- nav -->
+  <div class='layui-hide-md mobile-nav'>
+    <img src="{pboot:sitetplpath}/images/logo.png" alt="" class='mobile-logo'>
+    <button>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
   <ul class="layui-nav nav-box" lay-filter="">
     <li class="layui-nav-item {pboot:if(0=='{sort:scode}')} active {/pboot:if}" lay-unselect><a href="/">首页</a></li>
     {pboot:nav num=10 parent=0}
