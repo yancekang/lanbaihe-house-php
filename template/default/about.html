@@ -17,6 +17,7 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <link rel="stylesheet" href="{pboot:sitetplpath}/layui/css/layui.css">
   <link rel="stylesheet" href="{pboot:sitetplpath}/css/about.css">
+  <link rel="stylesheet" href="{pboot:sitetplpath}/css/mobile.css" media="screen and (max-width: 800px)">
   <script>
     (function (window, document) {
       function resize() {
@@ -67,9 +68,10 @@
     </div>
     <!-- 地图和联系方式 -->
     <div class="address-box">
-      <div class="address-img">
+      <div class="address-img layui-hide-xs">
 
       </div>
+      <img src="{pboot:sitetplpath}/images/address-map.png" alt="" class="layui-show-xs">
       <div class="company-info-box">
         <p class="info-title">长沙兰百合家庭服务有限公司</p>
         <ul>
