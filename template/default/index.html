@@ -248,10 +248,8 @@
         <p class='project-title g-bg'>线上视频</p>
       </div>
       <div class="video-content-box">
-        {pboot:list scode=3 num=1 order=date}
         <div class="video-container" id='video' data-video="[list:ext_video]">
         </div>
-        {/pboot:list}
         <div class="video-list">
           <div class="video-list-title">
             <p class="title">视频介绍</p>
@@ -260,7 +258,7 @@
             </p>
           </div>
           <div class="video-item-box">
-            {pboot:list scode=3 num=4 order=date start=2}
+            {pboot:list scode=3 num=4 order=date start=1}
             <div class="video-item active" data-video="[list:ext_video]">
               <img src="[list:ico]" alt="">
               <p>[list:title lencn=10]</p>
