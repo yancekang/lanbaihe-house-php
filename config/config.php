@@ -5,7 +5,7 @@ return array(
     'debug' => 0,
     
     // 授权码，多个授权码使用英文逗号隔开，如：'aaaaa,bbbbb'
-    'sn' => '281BE285D7',
+    'sn' => 'D0830C6C10',
     
     // 设置URL模式,1、基本模式,2、伪静态模式
     'url_type' => 1,
