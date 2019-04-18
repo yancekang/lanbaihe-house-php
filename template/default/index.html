@@ -248,11 +248,9 @@
         <p class='project-title g-bg'>线上视频</p>
       </div>
       <div class="video-content-box">
-        {pboot:list scode=3 num=1 order=date}
         <div class="video-container" id='video' data-video="[list:ext_video]">
         </div>
-        {/pboot:list}
-        <div class="video-list">
+        <div class="video-list layui-hide-xs">
           <div class="video-list-title">
             <p class="title">视频介绍</p>
             <p class='title-text'>
@@ -260,7 +258,7 @@
             </p>
           </div>
           <div class="video-item-box">
-            {pboot:list scode=3 num=4 order=date start=2}
+            {pboot:list scode=3 num=4 order=date start=1}
             <div class="video-item active" data-video="[list:ext_video]">
               <img src="[list:ico]" alt="">
               <p>[list:title lencn=10]</p>
@@ -297,7 +295,7 @@
         <p class='project-title-mintext'><span>Outstanding Student</span></p>
         <p class='project-title g-bg'>优秀案例</p>
       </div>
-      <div class="student-content">
+      <div class="student-content layui-hide-xs">
         {pboot:list scode=5 num=5 order=date}
         <div class="student-item">
           <div class="student-card">
@@ -313,6 +311,21 @@
         </div>
         {/pboot:list}
       </div>
+      <!-- 移动端下的students -->
+      <div class="layui-container layui-hide-sm m-student-box">
+          <div class='layui-row layui-col-space10'>
+            {pboot:list scode=5 num=5 order=date}
+            <div class="layui-col-xs6">
+                <div class="m-student-item">
+                    <img class='student-head' src="[list:ico]" alt="">
+                    <p class="student-name">[list:title lencn=20]</p>
+                    <p class="student-text">[list:description lencn=30]<b class='student-money'>[list:ext_amount]</b></p>
+                    <p class="student-group">[list:tags]</p>
+                </div>
+            </div>
+            {/pboot:list}
+          </div>
+        </div>
     </div>
   </div>
   <!-- footer -->

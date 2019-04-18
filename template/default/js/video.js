@@ -1,4 +1,8 @@
-var videoArr = ['http://demo.htmleaf.com/1711/201711141522/media/240.mp4','http://demo.htmleaf.com/1810/201810171450/ckin.mp4','https://video.mukewang.com/mk.mp4']
+var videoArr = []
+$('.video-item').each(function(){
+  videoArr.push($(this).attr('data-video'))
+})
+console.log(videoArr)
 var videoIndex = 0
 // 首页视频播放器
 var videoObject = {
