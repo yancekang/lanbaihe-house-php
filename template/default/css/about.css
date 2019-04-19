@@ -191,7 +191,26 @@ img {
 }
 
 .us-edit-content {
-  padding: 0.3rem 0;
+  padding: 0.3rem 0 0;
+  font-size: 0.24rem;
+  line-height: 0.4rem;
+}
+
+.us-edit-content .focus-text {
+  color: #7f2974;
+}
+
+.us-edit-content .full-img {
+  height: 4.58rem;
+  margin-bottom: 0.3rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.us-edit-content img.us-edit-img.layui-inline {
+  width: 100%;
+  object-fit: cover;
+  height: 2.6rem;
 }
 
 .address-box {

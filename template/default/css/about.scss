@@ -169,7 +169,23 @@ img {
   border-bottom:rem(4) solid $main-color;
 }
 .us-edit-content{
-  padding: rem(30) 0;
+  padding: rem(30) 0 0;
+  font-size: rem(24);
+  line-height: rem(40);
+  .focus-text{
+    color: $main-color;
+  }
+  .full-img{
+    height: rem(458);
+    margin-bottom: rem(30);
+    width: 100%;
+    object-fit: cover;
+  }
+  img.us-edit-img.layui-inline{
+    width: 100%;
+    object-fit: cover;
+    height: rem(260);
+  }
 }
 // 地址信息
 .address-box{

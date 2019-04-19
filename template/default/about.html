@@ -25,9 +25,9 @@
         if (ww > window.screen.width) {
           window.requestAnimationFrame(resize);
         } else {
-          if (ww > 1366) ww = 1366;
+          if (ww > 1680) ww = 1680;
           // 下面代码按照比例为100px = 1rem，此处一定要同pxToRem的转换比例
-          document.documentElement.style.fontSize = ww * 100 / 1366 + 'px';
+          document.documentElement.style.fontSize = ww * 100 / 1680 + 'px';
         }
       }
       if (document.readyState !== 'loading') {
@@ -54,16 +54,43 @@
   <div class="container">
     <!-- about-us-banner -->
     <div class="us-banner-box">
-        <span>{content:ext_en}</span>
-        <p>{content:title}</p>
+      <span>{content:ext_en}</span>
+      <p>{content:title}</p>
     </div>
     <div class="us-container">
       <div class="us-info-title">
         {content:title}
       </div>
-      <div class="us-edit-content">
-        <!-- 示例内容 -->
+      <!-- <div class="us-edit-content">
+        示例内容
         {content:content}
+      </div> -->
+      <div class="us-edit-content">
+        <span class='focus-text'>起源于2005年，从业十三年以来服务超3万户家庭，推荐就业超5万人次。</span>致力于打造专业化，精细化家庭服务体系。旗下包含：高端月嫂培训。小班教学，老师一对一辅导。另外开放了网络培训班，可以在线学习课程，让距离不再成为学习的阻碍。
+        <br>
+        <br>
+        公司始终坚持“为广大女性提供更多就业机会，为更多家庭提供专业高品质服务”为使命，希望每一位进入兰百合的学员都能“改变人生，做自信女人！”
+        旗下设有兰百合职业培训中心，兰百合是一家以高端家政培训和高端家庭服务为主营业务的品牌企业。公司成立近14年，累计开展母婴培训480余期，学员就业率高。
+        <br>
+        <br>
+        2008年9月，兰百合被长沙家政协会评为诚信单位
+        2010年6月，兰百合被湖南协会评为家政行业最受信赖单位。
+        2016年2月， 兰百合被中国妇幼保健协会评为“金牌月嫂”推荐单位。
+        2017年12月，兰百合被湖南省家庭服务协会评为诚信服务先进单位。
+        <br>
+        <br>
+        公司始终坚持<span class='focus-text'>“为广大女性提供更多就业机会，为更多家庭提供专业高品质服务”</span>为使命，希望每一位进入兰百合的学员都能<span class='focus-text'>“改变人生，做自信女人！”</span>
+        <br>
+        <br>
+        <img src="{pboot:sitetplpath}/images/us-01.jpg" alt="" class='us-edit-img full-img'>
+        <div class='layui-row layui-col-space30'>
+          <div class="layui-col-xs6">
+            <img src="{pboot:sitetplpath}/images/us-02.jpg" alt="" class='us-edit-img layui-inline'>
+          </div>
+          <div class="layui-col-xs6">
+            <img src="{pboot:sitetplpath}/images/us-03.jpg" alt="" class='us-edit-img layui-inline'>
+          </div>
+        </div>
       </div>
     </div>
     <!-- 地图和联系方式 -->
@@ -96,7 +123,7 @@
           <li>
             <i class="info-item-icon icon-email"></i>
             <p class="info-item-text">
-              电子邮箱：02250980@qq.com 
+              电子邮箱：02250980@qq.com
             </p>
           </li>
           <li>
