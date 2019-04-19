@@ -112,6 +112,7 @@ body {
   width: 4.1rem;
   height: 5.4rem;
   margin-right: 0.3rem;
+  vertical-align: top;
 }
 
 .project-box .project-info-box .info-item .nums-text {
