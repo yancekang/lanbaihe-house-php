@@ -413,6 +413,7 @@ img {
 
 .server-box .server-tab .item-box {
   font-size: 0;
+  text-align: center;
 }
 
 .server-box .server-tab .item-box .server-item-info {
