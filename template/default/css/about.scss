@@ -12,7 +12,7 @@ $cff: #ffffff;
   float: left;
 }
 html{
-  font-size: 100px;
+  font-size: 80px;
 }
 body {
   padding-top: rem(150);
@@ -227,27 +227,27 @@ img {
         display: inline-block;
         vertical-align: middle;
         background-size: 100%;
-        width: rem(34);
+        width: rem(44);
         margin-right: rem(11);
         &.icon-tel{
-          height: rem(24);
+          height: rem(30);
           background: url('../images/address-tel.png') center no-repeat;
         }
         &.icon-loc{
           background: url('../images/address-loc.png') center no-repeat;
-          height:rem(30);
+          height:rem(40);
         }
         &.icon-phone{
           background: url('../images/address-phone.png') center no-repeat;
-          height:rem(30);
+          height:rem(40);
         }
         &.icon-email{
           background: url('../images/address-email.png') center no-repeat;
-          height:rem(21);
+          height:rem(31);
         }
         &.icon-www{
           background: url('../images/address-icon.png') center no-repeat;
-          height:rem(24);
+          height:rem(34);
         }
       }
       p{

@@ -6,9 +6,12 @@
   float: left;
 }
 
+html {
+  font-size: 80px;
+}
+
 body {
   padding-top: 1.5rem;
-  font-size: 100px;
 }
 
 img {

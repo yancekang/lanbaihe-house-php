@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 100px;
+  font-size: 80px;
 }
 
 body {
@@ -261,33 +261,33 @@ img {
   display: inline-block;
   vertical-align: middle;
   background-size: 100%;
-  width: 0.34rem;
+  width: 0.44rem;
   margin-right: 0.11rem;
 }
 
 .address-box .company-info-box ul li i.icon-tel {
-  height: 0.24rem;
+  height: 0.3rem;
   background: url("../images/address-tel.png") center no-repeat;
 }
 
 .address-box .company-info-box ul li i.icon-loc {
   background: url("../images/address-loc.png") center no-repeat;
-  height: 0.3rem;
+  height: 0.4rem;
 }
 
 .address-box .company-info-box ul li i.icon-phone {
   background: url("../images/address-phone.png") center no-repeat;
-  height: 0.3rem;
+  height: 0.4rem;
 }
 
 .address-box .company-info-box ul li i.icon-email {
   background: url("../images/address-email.png") center no-repeat;
-  height: 0.21rem;
+  height: 0.31rem;
 }
 
 .address-box .company-info-box ul li i.icon-www {
   background: url("../images/address-icon.png") center no-repeat;
-  height: 0.24rem;
+  height: 0.34rem;
 }
 
 .address-box .company-info-box ul li p {

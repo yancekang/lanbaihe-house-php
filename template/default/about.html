@@ -25,9 +25,9 @@
         if (ww > window.screen.width) {
           window.requestAnimationFrame(resize);
         } else {
-          if (ww > 1680) ww = 1680;
+          if (ww > 1920) ww = 1920;
           // 下面代码按照比例为100px = 1rem，此处一定要同pxToRem的转换比例
-          document.documentElement.style.fontSize = ww * 100 / 1680 + 'px';
+          document.documentElement.style.fontSize = ww * 100 / 1920 + 'px';
         }
       }
       if (document.readyState !== 'loading') {
@@ -59,7 +59,8 @@
     </div>
     <div class="us-container">
       <div class="us-info-title">
-        {content:title}
+        <!-- {content:title} -->
+        公司简介
       </div>
       <!-- <div class="us-edit-content">
         示例内容
@@ -84,10 +85,10 @@
         <br>
         <img src="{pboot:sitetplpath}/images/us-01.jpg" alt="" class='us-edit-img full-img'>
         <div class='layui-row layui-col-space30'>
-          <div class="layui-col-xs6">
+          <div class="layui-col-xs6 us-img-01">
             <img src="{pboot:sitetplpath}/images/us-02.jpg" alt="" class='us-edit-img layui-inline'>
           </div>
-          <div class="layui-col-xs6">
+          <div class="layui-col-xs6 us-img-02">
             <img src="{pboot:sitetplpath}/images/us-03.jpg" alt="" class='us-edit-img layui-inline'>
           </div>
         </div>
