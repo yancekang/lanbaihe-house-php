@@ -18,15 +18,21 @@
   <link rel="stylesheet" href="{pboot:sitetplpath}/css/test.css">
   <link rel="stylesheet" href="{pboot:sitetplpath}/css/mobile.css" media="screen and (max-width: 800px)">
   <script>
+      var rootSize
+      if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))){
+        rootSize = 1366
+      }else {
+        rootSize = 1920
+      }
       (function (window, document) {
           function resize() {
               var ww = window.innerWidth;
               if (ww > window.screen.width) {
                   window.requestAnimationFrame(resize);
               } else {
-                  if (ww > 1920) ww = 1920;
+                  if (ww > rootSize) ww = rootSize;
                   // 下面代码按照比例为100px = 1rem，此处一定要同pxToRem的转换比例
-                  document.documentElement.style.fontSize = ww * 100 / 1920 + 'px';
+                  document.documentElement.style.fontSize = ww * 100 / rootSize + 'px';
               }
           }
           if (document.readyState !== 'loading') {
@@ -103,10 +109,10 @@
       <p class="info-slogan">
         十五年家政行业经验，口碑好，老品牌，更放心。根据个人情况量身打造晋升途径，教您更快提升收入。
       </p>
-      <!-- <fieldset class="layui-elem-field layui-field-title project-content-title">
+      <fieldset class="layui-elem-field layui-field-title project-content-title">
         <legend>您想要的都有</legend>
       </fieldset>
-       project-content
+       <!-- project-content -->
       <div class="project-content layui-row">
         <div class="content-item">
           <img src="{pboot:sitetplpath}/images/content-1.jpg" alt="">
@@ -140,7 +146,7 @@
           <img src="{pboot:sitetplpath}/images/content-8.jpg" alt="">
           <p>保洁培训</p>
         </div>
-      </div> -->
+      </div>
     </div>
     <!-- server-box -->
     <div class="server-box">
@@ -152,8 +158,8 @@
       <div class="layui-tab layui-tab-brief server-tab" lay-filter="docDemoTabBrief">
         <ul class="layui-tab-title tab-title-box">
           <li class="layui-this">月嫂培训</li>
-          <!-- <li >家政服务</li>
-          <li>高端家政服务</li> -->
+          <li >家政服务</li>
+          <li>高端家政服务</li>
         </ul>
         <div class="layui-tab-content">
           <!-- 母婴服务 -->
@@ -167,7 +173,7 @@
                 </p>
               </div>
             </div>
-            <!-- <div class="server-item-info">
+             <div class="server-item-info">
               <img src="{pboot:sitetplpath}/images/server-5.jpg" alt="">
               <div class='server-item-blank'>
                 <p class="title">育婴师</p>
@@ -175,8 +181,8 @@
                   32种专业技能、辅食制作、早教游戏、统一培训、规范管理、技能专业。
                 </p>
               </div>
-            </div> -->
-            <!-- <div class="server-item-info">
+            </div> 
+            <div class="server-item-info">
               <img src="{pboot:sitetplpath}/images/server-6.png" alt="">
               <div class='server-item-blank'>
                 <p class="title">催乳师</p>
@@ -184,7 +190,7 @@
                   24种专业手法、解决12大催乳问题、技能专业。
                 </p>
               </div>
-            </div> -->
+            </div>
           </div>
           <!-- 家政服务 -->
           <div class="layui-tab-item item-box">
@@ -249,7 +255,7 @@
         </div>
       </div>
     </div>
-    <!-- video-box
+    <!-- video-box-->
     <div class="video-box">
       <div class="project-title-new ">
         <p class='project-title-mintext'><span>Online Video</span></p>
@@ -276,7 +282,7 @@
         </div>
       </div>
     </div>
-    teacher-box
+    <!-- teacher-box -->
     <div class="teacher-box">
       <div class="project-title-new">
         <p class='project-title-mintext'><span>Our Teacher</span></p>
@@ -297,7 +303,7 @@
         {/pboot:list}
       </div>
     </div>
-    student-box
+    <!-- student-box -->
     <div class="student-box">
       <div class="project-title-new">
         <p class='project-title-mintext'><span>Outstanding Student</span></p>
@@ -319,7 +325,7 @@
         </div>
         {/pboot:list}
       </div>
-      移动端下的students
+      <!-- 移动端下的students -->
       <div class="layui-container layui-hide-sm m-student-box">
           <div class='layui-row layui-col-space10'>
             {pboot:list scode=5 num=5 order=date}
@@ -334,7 +340,7 @@
             {/pboot:list}
           </div>
         </div>
-    </div> -->
+    </div>
   </div>
   <!-- footer -->
 {include file=common/foot.html}

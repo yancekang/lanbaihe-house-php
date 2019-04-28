@@ -195,9 +195,10 @@ img {
     display: inline-block;
     width: rem(840);
     vertical-align: top;
-    padding: rem(22) 0  0  rem(22);
+    padding: 0 0  0  rem(22);
     box-sizing: border-box;
     .server-text-box{
+      padding-top:rem(22);
       vertical-align: top;
       margin-right: rem(25);
       width: rem(353);
