@@ -12,7 +12,7 @@ $cff: #ffffff;
   float: left;
 }
 html{
-  font-size: 80px;
+  font-size: 83px;
 }
 body {
   padding-top: rem(150);
@@ -137,33 +137,39 @@ img {
     }
   }
 }
+
+.layui-carousel-ind{
+  top:rem(-52);
+}
+.layui-carousel[lay-arrow=hover] .layui-carousel-arrow {
+  left: rem(50);
+  margin-top: rem(-55);
+}
+.layui-carousel-arrow[lay-type=add]{
+  right:rem(50);
+  background: url('../images/arow-right.png') 0 0 no-repeat;
+  background-size: contain;
+}
+.layui-carousel[lay-arrow=hover] .layui-carousel-arrow[lay-type=add]{
+  right:rem(50);
+  background: url('../images/arow-right.png') 0 0 no-repeat;
+  background-size: contain;
+}
+.layui-carousel-ind li.layui-this{
+  background-color: $main-color
+}
+.layui-carousel-ind ul,.layui-carousel-ind ul:hover{
+  background-color: transparent;
+}
+.layui-carousel-ind li{
+  margin: 0 rem(7);
+  width: rem(16);
+  height: rem(16);
+  background-color: #dedede;
+}
 .container{
   max-width: rem(1366);
   margin: 0 auto;
-  .layui-carousel-ind{
-    top:rem(-52);
-  }
-  .layui-carousel[lay-arrow=hover] .layui-carousel-arrow {
-    left: rem(50);
-    margin-top: rem(-55);
-  }
-  .layui-carousel[lay-arrow=hover] .layui-carousel-arrow[lay-type=add]{
-    right:rem(50);
-    background: url('../images/arow-right.png') 0 0 no-repeat;
-    background-size: contain;
-  }
-  .layui-carousel-ind li.layui-this{
-    background-color: $main-color
-  }
-  .layui-carousel-ind ul,.layui-carousel-ind ul:hover{
-    background-color: transparent;
-  }
-  .layui-carousel-ind li{
-    margin: 0 rem(7);
-    width: rem(16);
-    height: rem(16);
-    background-color: #dedede;
-  }
   // 栏目标题文字信息
   .project-title-new{
     text-align: center;
@@ -195,6 +201,7 @@ img {
     }
   }
 }
+
 .carousel-box{
   .layui-carousel-arrow{
     background: url('../images/arow-left.png') 0 0 no-repeat;
@@ -413,7 +420,7 @@ img {
     box-sizing: border-box;
     font-size: 0;
     .video-container{
-      width: rem(824);
+      width: rem(822);
       height: rem(510);
       display: inline-block;
     }

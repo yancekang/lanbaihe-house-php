@@ -313,7 +313,11 @@ body{
   font-size: 14px;
 }
 .server-container .server-nav .nav-line {
-  width: 2.8rem;
+  width: 2.2rem;
+}
+.server-container .server-padding-box{
+  width:100;
+  padding: 0;
 }
 .server-container .server-content p.server-title span {
   margin-top:rem(20);
@@ -334,11 +338,13 @@ body{
   display: block;
   width: auto;
   margin-right: 0;
+  height: auto;
 }
 .server-container .server-content p.server-title{
   font-size: 16px;
 }
 .server-container .server-content p.server-detail{
+  height: auto;
   font-size: 14px;
   line-height: rem(88);
   margin-bottom: rem(60);

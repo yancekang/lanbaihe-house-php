@@ -360,7 +360,12 @@ body {
 }
 
 .server-container .server-nav .nav-line {
-  width: 2.8rem;
+  width: 2.2rem;
+}
+
+.server-container .server-padding-box {
+  width: 100;
+  padding: 0;
 }
 
 .server-container .server-content p.server-title span {
@@ -386,6 +391,7 @@ body {
   display: block;
   width: auto;
   margin-right: 0;
+  height: auto;
 }
 
 .server-container .server-content p.server-title {
@@ -393,6 +399,7 @@ body {
 }
 
 .server-container .server-content p.server-detail {
+  height: auto;
   font-size: 14px;
   line-height: 0.88rem;
   margin-bottom: 0.6rem;

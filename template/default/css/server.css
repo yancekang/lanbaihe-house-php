@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 80px;
+  font-size: 83px;
 }
 
 body {
@@ -153,11 +153,6 @@ img {
   margin-right: 0;
 }
 
-.container {
-  max-width: 13.66rem;
-  margin: 0 auto;
-}
-
 .server-banner-box {
   height: 2rem;
   position: relative;
@@ -181,8 +176,14 @@ img {
 
 .server-container {
   background-color: #f6f7f8;
+}
+
+.server-container .server-padding-box {
+  max-width: 13.66rem;
+  margin: 0 auto;
   padding: 0.8rem 1.6rem;
   font-size: 0;
+  box-sizing: border-box;
 }
 
 .server-container .server-nav {
@@ -228,14 +229,24 @@ img {
 }
 
 .server-container .server-content .server-text-box {
+  height: 6.56rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding-top: 0.22rem;
   vertical-align: top;
-  margin-right: 0.25rem;
+  margin-right: 0.23rem;
   width: 3.53rem;
   display: inline-block;
+  padding-bottom: 0.22rem;
 }
 
 .server-container .server-content p.server-detail {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 20;
+  overflow: hidden;
+  height: 5.5rem;
+  text-overflow: ellipsis;
   margin-top: 0.15rem;
   color: #666666;
   line-height: 0.28rem;
@@ -256,12 +267,58 @@ img {
 }
 
 .server-container .server-content .server-img {
+  vertical-align: top;
   width: 4.4rem;
   display: inline-block;
   height: 6.56rem;
-  background: url("../images/server-detail-01.jpg") 0 0 no-repeat;
   background-size: cover;
   position: relative;
+  background: url("../images/server-detail-01.jpg") 0 0 no-repeat;
+}
+
+.server-container .server-content .server-img.baomu {
+  background: url("../images/server-detail-01.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.server-container .server-content .server-img.hugong {
+  background: url("https://0.rc.xiniu.com/g2/M00/0F/DF/CgAGe1xIPGiAYIkPAANxAoQHA-4090.png") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.server-container .server-content .server-img.baojie {
+  background: url("https://0.rc.xiniu.com/g2/M00/0F/DF/CgAGe1xIPGiAYIkPAANxAoQHA-4090.png") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.server-container .server-content .server-img.yuesao {
+  background: url("https://0.rc.xiniu.com/g2/M00/0F/DF/CgAGe1xIPGiAYIkPAANxAoQHA-4090.png") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.server-container .server-content .server-img.cuirushi {
+  background: url("https://0.rc.xiniu.com/g2/M00/0F/DF/CgAGe1xIPGiAYIkPAANxAoQHA-4090.png") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.server-container .server-content .server-img.yuyinshi {
+  background: url("../images/server-detail-01.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.server-container .server-content .server-img.qwzl {
+  background: url("../images/server-detail-01.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.server-container .server-content .server-img.srdz {
+  background: url("../images/server-detail-01.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.server-container .server-content .server-img.swjz {
+  background: url("../images/server-detail-01.jpg") 0 0 no-repeat;
+  background-size: cover;
 }
 
 .server-container .server-content .server-img .icon-server {

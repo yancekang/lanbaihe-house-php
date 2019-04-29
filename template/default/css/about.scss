@@ -12,7 +12,7 @@ $cff: #ffffff;
   float: left;
 }
 html{
-  font-size: 80px;
+  font-size: 83px;
 }
 body {
   padding-top: rem(150);
@@ -160,7 +160,10 @@ img {
   }
 }
 .us-container{
+  max-width: rem(1366);
+  margin: 0 auto;
   padding: 0 rem(160);
+  box-sizing: border-box;
 }
 .us-info-title{
   line-height: rem(98);

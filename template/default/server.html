@@ -19,30 +19,30 @@
   <link rel="stylesheet" href="{pboot:sitetplpath}/css/server.css">
   <link rel="stylesheet" href="{pboot:sitetplpath}/css/mobile.css" media="screen and (max-width: 800px)">
   <script>
-      var rootSize
-      if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))){
-        rootSize = 1366
-      }else {
-        rootSize = 1920
+    var rootSize
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      rootSize = 1366
+    } else {
+      rootSize = 1920
+    }
+    (function (window, document) {
+      function resize() {
+        var ww = window.innerWidth;
+        if (ww > window.screen.width) {
+          window.requestAnimationFrame(resize);
+        } else {
+          if (ww > rootSize) ww = rootSize;
+          // 下面代码按照比例为100px = 1rem，此处一定要同pxToRem的转换比例
+          document.documentElement.style.fontSize = ww * 100 / rootSize + 'px';
+        }
       }
-      (function (window, document) {
-          function resize() {
-              var ww = window.innerWidth;
-              if (ww > window.screen.width) {
-                  window.requestAnimationFrame(resize);
-              } else {
-                  if (ww > rootSize) ww = rootSize;
-                  // 下面代码按照比例为100px = 1rem，此处一定要同pxToRem的转换比例
-                  document.documentElement.style.fontSize = ww * 100 / rootSize + 'px';
-              }
-          }
-          if (document.readyState !== 'loading') {
-              resize();
-          } else {
-              document.addEventListener('DOMContentLoaded', resize);
-          }
-          window.addEventListener('resize', resize);
-      })(window, document);
+      if (document.readyState !== 'loading') {
+        resize();
+      } else {
+        document.addEventListener('DOMContentLoaded', resize);
+      }
+      window.addEventListener('resize', resize);
+    })(window, document);
   </script>
 </head>
 
@@ -57,47 +57,47 @@
   <!-- 正文开始 -->
   {include file=common/top.html}
   <!-- end top-->
-  <div class="container">
-    <!-- about-us-banner -->
-    <div class="server-banner-box">
-      <span>Service</span>
-      <p>服务内容</p>
-    </div>
-    <div class="server-container">
+  <!-- about-us-banner -->
+  <div class="server-banner-box">
+    <span>Service</span>
+    <p>服务内容</p>
+  </div>
+  <div class="server-container">
+    <div class='server-padding-box'>
       <div class="server-nav">
         <p class="nav-line"></p>
-        <ul>
+        <ul class='server-nav-box'>
           <li class="nav-title">月嫂培训</li>
-          <li  class='active'>保姆</li>
-          <li>护工</li>
-          <li>保洁</li>
+          <li class='active nav-item'>保姆</li>
+          <li class='nav-item'>护工</li>
+          <li class='nav-item'>保洁</li>
           <li class="nav-title">家政服务</li>
-          <li>月嫂</li>
-          <li>催乳师</li>
-          <li>育婴师</li>
+          <li class='nav-item'>月嫂</li>
+          <li class='nav-item'>催乳师</li>
+          <li class='nav-item'>育婴师</li>
           <li class="nav-title">高端家政服务</li>
-          <li>全屋整理</li>
-          <li>私人订制</li>
-          <li>涉外家政</li>
+          <li class='nav-item'>全屋整理</li>
+          <li class='nav-item'>私人订制</li>
+          <li class='nav-item'>涉外家政</li>
         </ul>
       </div>
       <div class="server-content">
-          <div class="server-text-box">
-              <p class="server-title">
-                  保姆
-                  <span class="title-line"></span>
-                </p>
-                <p class="server-detail">
-                    是指能为孕妇、产妇、哺乳期妇女、新生儿不同时期提供生活保健、身体保健、卫生保健等健康管理、保健服务的专业人员。能从保健的角度为孕产妇和新生儿提供常见，熟练掌握母婴护理的基本技能与方法。
-                    最新统计数字表明，我国每年有接近2000万新妈妈和新生儿，这些产妇中有40%以上需要聘请星级月嫂的高品质照护，母婴保健市场潜力巨大；
-                    据不完全预测，全国需要月嫂800多万人，而现有实际从业人员——保姆，只能提供普通的生活照护，不能满足新妈妈为追求心身保健而指导与服务的高端需 求；
-                    在一个中等城市其数量少于5人，95%以上的县级地区专业月嫂数量基本为零，全国母婴保健市场一片空白专业月嫂缺乏，市场需求十分巨大，行业发展后劲无穷。
-                    基于此，人力资源和社会保障部中国就业促进会，面向全国开展月嫂职业培训。
-                </p>
-          </div>
-          <div class="server-img">
-            <img class='icon-server layui-hide-xs' src="{pboot:sitetplpath}/images/server-detail-icon.png" alt="">
-          </div>                    
+        <div class="server-text-box">
+          <p class="server-title">
+            保姆
+            <span class="title-line"></span>
+          </p>
+          <p class="server-detail">
+            是指能为孕妇、产妇、哺乳期妇女、新生儿不同时期提供生活保健、身体保健、卫生保健等健康管理、保健服务的专业人员。能从保健的角度为孕产妇和新生儿提供常见，熟练掌握母婴护理的基本技能与方法。
+            最新统计数字表明，我国每年有接近2000万新妈妈和新生儿，这些产妇中有40%以上需要聘请星级月嫂的高品质照护，母婴保健市场潜力巨大；
+            据不完全预测，全国需要月嫂800多万人，而现有实际从业人员——保姆，只能提供普通的生活照护，不能满足新妈妈为追求心身保健而指导与服务的高端需 求；
+            在一个中等城市其数量少于5人，95%以上的县级地区专业月嫂数量基本为零，全国母婴保健市场一片空白专业月嫂缺乏，市场需求十分巨大，行业发展后劲无穷。
+            基于此，人力资源和社会保障部中国就业促进会，面向全国开展月嫂职业培训。
+          </p>
+        </div>
+        <div class="server-img" id='serverImg'>
+          <img class='icon-server layui-hide-xs' src="{pboot:sitetplpath}/images/server-detail-icon.png" alt="">
+        </div>
       </div>
     </div>
   </div>
