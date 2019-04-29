@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js">
 <!--<![endif]-->
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
@@ -13,29 +14,35 @@
   <link rel="shortcut icon" href="favicon.ico">
   <meta name="description" content="" />
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <link rel="stylesheet" href="{pboot:sitetplpath}/layui/css/layui.css">
   <link rel="stylesheet" href="{pboot:sitetplpath}/css/test.css">
   <link rel="stylesheet" href="{pboot:sitetplpath}/css/mobile.css" media="screen and (max-width: 800px)">
   <script>
-      (function (window, document) {
-          function resize() {
-              var ww = window.innerWidth;
-              if (ww > window.screen.width) {
-                  window.requestAnimationFrame(resize);
-              } else {
-                  if (ww > 1920) ww = 1920;
-                  // 下面代码按照比例为100px = 1rem，此处一定要同pxToRem的转换比例
-                  document.documentElement.style.fontSize = ww * 100 / 1920 + 'px';
-              }
-          }
-          if (document.readyState !== 'loading') {
-              resize();
-          } else {
-              document.addEventListener('DOMContentLoaded', resize);
-          }
-          window.addEventListener('resize', resize);
-      })(window, document);
+    var rootSize
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      rootSize = 1366
+    } else {
+      rootSize = 1920
+    }
+    (function (window, document) {
+      function resize() {
+        var ww = window.innerWidth;
+        if (ww > window.screen.width) {
+          window.requestAnimationFrame(resize);
+        } else {
+          if (ww > rootSize) ww = rootSize;
+          // 下面代码按照比例为100px = 1rem，此处一定要同pxToRem的转换比例
+          document.documentElement.style.fontSize = ww * 100 / rootSize + 'px';
+        }
+      }
+      if (document.readyState !== 'loading') {
+        resize();
+      } else {
+        document.addEventListener('DOMContentLoaded', resize);
+      }
+      window.addEventListener('resize', resize);
+    })(window, document);
   </script>
   <style>
     .project-box {
@@ -47,26 +54,27 @@
 </head>
 
 <body>
-<!-- 低版本浏览器提示 -->
-<!--[if lt IE 7]>
+  <!-- 低版本浏览器提示 -->
+  <!--[if lt IE 7]>
 <p class="browsehappy">
   You are using an <strong>outdated</strong> browser. Please
   <a href="#">upgrade your browser</a> to improve your experience.
 </p>
 <![endif]-->
-<!-- 正文开始 -->
-{include file=common/top.html}
-<!-- end top-->
-  <div class="container">
-    <div class="layui-carousel carousel-box" id="carousel">
-      <div carousel-item>
-        {pboot:slide num=5 gid=1}
-        <div><img src="[slide:src]" alt=""></div>
-        {/pboot:slide}
-      </div>
+  <!-- 正文开始 -->
+  {include file=common/top.html}
+  <!-- end top-->
+  <!-- focus-box -->
+  <div class="layui-carousel carousel-box" id="carousel">
+    <div carousel-item>
+      {pboot:slide num=5 gid=1}
+      <div><img src="[slide:src]" alt=""></div>
+      {/pboot:slide}
     </div>
-    <!-- 培训项目 -->
-    <div class="project-box">
+  </div>
+  <!-- 培训项目 -->
+  <div class="project-box">
+    <div class="container">
       <div class="project-title-new">
         <p class='project-title-mintext'><span>Training Project</span></p>
         <p class='project-title  g-bg'>培训项目</p>
@@ -103,10 +111,10 @@
       <p class="info-slogan">
         十五年家政行业经验，口碑好，老品牌，更放心。根据个人情况量身打造晋升途径，教您更快提升收入。
       </p>
-      <!-- <fieldset class="layui-elem-field layui-field-title project-content-title">
+      <fieldset class="layui-elem-field layui-field-title project-content-title">
         <legend>您想要的都有</legend>
       </fieldset>
-       project-content
+      <!-- project-content -->
       <div class="project-content layui-row">
         <div class="content-item">
           <img src="{pboot:sitetplpath}/images/content-1.jpg" alt="">
@@ -140,10 +148,12 @@
           <img src="{pboot:sitetplpath}/images/content-8.jpg" alt="">
           <p>保洁培训</p>
         </div>
-      </div> -->
+      </div>
     </div>
-    <!-- server-box -->
-    <div class="server-box">
+  </div>
+  <!-- server-box -->
+  <div class="server-box">
+    <div class="container">
       <div class="project-title-new">
         <p class='project-title-mintext'><span>Service Content</span></p>
         <p class='project-title ff-bg'>服务项目</p>
@@ -152,8 +162,8 @@
       <div class="layui-tab layui-tab-brief server-tab" lay-filter="docDemoTabBrief">
         <ul class="layui-tab-title tab-title-box">
           <li class="layui-this">月嫂培训</li>
-          <!-- <li >家政服务</li>
-          <li>高端家政服务</li> -->
+          <li>家政服务</li>
+          <li>高端家政服务</li>
         </ul>
         <div class="layui-tab-content">
           <!-- 母婴服务 -->
@@ -167,7 +177,7 @@
                 </p>
               </div>
             </div>
-            <!-- <div class="server-item-info">
+            <div class="server-item-info">
               <img src="{pboot:sitetplpath}/images/server-5.jpg" alt="">
               <div class='server-item-blank'>
                 <p class="title">育婴师</p>
@@ -175,8 +185,8 @@
                   32种专业技能、辅食制作、早教游戏、统一培训、规范管理、技能专业。
                 </p>
               </div>
-            </div> -->
-            <!-- <div class="server-item-info">
+            </div>
+            <div class="server-item-info">
               <img src="{pboot:sitetplpath}/images/server-6.png" alt="">
               <div class='server-item-blank'>
                 <p class="title">催乳师</p>
@@ -184,7 +194,7 @@
                   24种专业手法、解决12大催乳问题、技能专业。
                 </p>
               </div>
-            </div> -->
+            </div>
           </div>
           <!-- 家政服务 -->
           <div class="layui-tab-item item-box">
@@ -249,8 +259,10 @@
         </div>
       </div>
     </div>
-    <!-- video-box
-    <div class="video-box">
+  </div>
+  <!-- video-box-->
+  <div class="video-box">
+    <div class="container">
       <div class="project-title-new ">
         <p class='project-title-mintext'><span>Online Video</span></p>
         <p class='project-title g-bg'>线上视频</p>
@@ -276,8 +288,10 @@
         </div>
       </div>
     </div>
-    teacher-box
-    <div class="teacher-box">
+  </div>
+  <!-- teacher-box -->
+  <div class="teacher-box">
+    <div class="container">
       <div class="project-title-new">
         <p class='project-title-mintext'><span>Our Teacher</span></p>
         <p class='project-title ff-bg'>师资力量</p>
@@ -297,8 +311,10 @@
         {/pboot:list}
       </div>
     </div>
-    student-box
-    <div class="student-box">
+  </div>
+  <!-- student-box -->
+  <div class="student-box">
+    <div class="container">
       <div class="project-title-new">
         <p class='project-title-mintext'><span>Outstanding Student</span></p>
         <p class='project-title g-bg'>优秀案例</p>
@@ -319,22 +335,22 @@
         </div>
         {/pboot:list}
       </div>
-      移动端下的students
+      <!-- 移动端下的students -->
       <div class="layui-container layui-hide-sm m-student-box">
-          <div class='layui-row layui-col-space10'>
-            {pboot:list scode=5 num=5 order=date}
-            <div class="layui-col-xs6">
-                <div class="m-student-item">
-                    <img class='student-head' src="[list:ico]" alt="">
-                    <p class="student-name">[list:title lencn=20]</p>
-                    <p class="student-text">[list:description lencn=30]<b class='student-money'>[list:ext_amount]</b></p>
-                    <p class="student-group">[list:tags]</p>
-                </div>
+        <div class='layui-row layui-col-space10'>
+          {pboot:list scode=5 num=5 order=date}
+          <div class="layui-col-xs6">
+            <div class="m-student-item">
+              <img class='student-head' src="[list:ico]" alt="">
+              <p class="student-name">[list:title lencn=20]</p>
+              <p class="student-text">[list:description lencn=30]<b class='student-money'>[list:ext_amount]</b></p>
+              <p class="student-group">[list:tags]</p>
             </div>
-            {/pboot:list}
           </div>
+          {/pboot:list}
         </div>
-    </div> -->
+      </div>
+    </div>
   </div>
   <!-- footer -->
-{include file=common/foot.html}
+  {include file=common/foot.html}

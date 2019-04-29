@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 80px;
+  font-size: 83px;
 }
 
 body {
@@ -153,39 +153,45 @@ img {
   margin-right: 0;
 }
 
-.container {
-  max-width: 13.66rem;
-  margin: 0 auto;
-}
-
-.container .layui-carousel-ind {
+.layui-carousel-ind {
   top: -0.52rem;
 }
 
-.container .layui-carousel[lay-arrow=hover] .layui-carousel-arrow {
+.layui-carousel[lay-arrow=hover] .layui-carousel-arrow {
   left: 0.5rem;
   margin-top: -0.55rem;
 }
 
-.container .layui-carousel[lay-arrow=hover] .layui-carousel-arrow[lay-type=add] {
+.layui-carousel-arrow[lay-type=add] {
   right: 0.5rem;
   background: url("../images/arow-right.png") 0 0 no-repeat;
   background-size: contain;
 }
 
-.container .layui-carousel-ind li.layui-this {
+.layui-carousel[lay-arrow=hover] .layui-carousel-arrow[lay-type=add] {
+  right: 0.5rem;
+  background: url("../images/arow-right.png") 0 0 no-repeat;
+  background-size: contain;
+}
+
+.layui-carousel-ind li.layui-this {
   background-color: #7f2974;
 }
 
-.container .layui-carousel-ind ul, .container .layui-carousel-ind ul:hover {
+.layui-carousel-ind ul, .layui-carousel-ind ul:hover {
   background-color: transparent;
 }
 
-.container .layui-carousel-ind li {
+.layui-carousel-ind li {
   margin: 0 0.07rem;
   width: 0.16rem;
   height: 0.16rem;
   background-color: #dedede;
+}
+
+.container {
+  max-width: 13.66rem;
+  margin: 0 auto;
 }
 
 .container .project-title-new {
@@ -473,7 +479,7 @@ img {
 }
 
 .video-box .video-content-box .video-container {
-  width: 8.24rem;
+  width: 8.22rem;
   height: 5.1rem;
   display: inline-block;
 }

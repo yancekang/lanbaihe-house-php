@@ -19,15 +19,22 @@
   <link rel="stylesheet" href="{pboot:sitetplpath}/css/about.css">
   <link rel="stylesheet" href="{pboot:sitetplpath}/css/mobile.css" media="screen and (max-width: 800px)">
   <script>
+    var rootSize
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      /*window.location.href="你的手机版地址";*/
+      rootSize = 1366
+    } else {
+      rootSize = 1920
+    }
     (function (window, document) {
       function resize() {
         var ww = window.innerWidth;
         if (ww > window.screen.width) {
           window.requestAnimationFrame(resize);
         } else {
-          if (ww > 1920) ww = 1920;
+          if (ww > rootSize) ww = rootSize;
           // 下面代码按照比例为100px = 1rem，此处一定要同pxToRem的转换比例
-          document.documentElement.style.fontSize = ww * 100 / 1920 + 'px';
+          document.documentElement.style.fontSize = ww * 100 / rootSize + 'px';
         }
       }
       if (document.readyState !== 'loading') {
@@ -51,23 +58,24 @@
   <!-- 正文开始 -->
   {include file=common/top.html}
   <!-- end top-->
-  <div class="container">
-    <!-- about-us-banner -->
-    <div class="us-banner-box">
-      <span>{content:ext_en}</span>
-      <p>{content:title}</p>
-    </div>
-    <div class="us-container">
+  <!-- about-us-banner -->
+  <div class="us-banner-box">
+    <span>{content:ext_en}</span>
+    <p>{content:title}</p>
+  </div>
+  <div class="us-container">
+    <div class="us-info-container">
       <div class="us-info-title">
         <!-- {content:title} -->
         公司简介
       </div>
       <!-- <div class="us-edit-content">
-        示例内容
-        {content:content}
-      </div> -->
+              示例内容
+              {content:content}
+            </div> -->
       <div class="us-edit-content">
-        <span class='focus-text'>长沙兰百合家庭服务有限公司起源于2005年，从业十三年以来服务超3万户家庭，推荐就业超5万人次。</span>致力于打造专业化，精细化家庭服务体系。旗下包含：高端月嫂培训。小班教学，老师一对一辅导。另外开放了网络培训班，可以在线学习课程，让距离不再成为学习的阻碍。
+        <span
+          class='focus-text'>长沙兰百合家庭服务有限公司起源于2005年，从业十三年以来服务超3万户家庭，推荐就业超5万人次。</span>致力于打造专业化，精细化家庭服务体系。旗下包含：高端月嫂培训。小班教学，老师一对一辅导。另外开放了网络培训班，可以在线学习课程，让距离不再成为学习的阻碍。
         <br>
         <br>
         公司始终坚持“为广大女性提供更多就业机会，为更多家庭提供专业高品质服务”为使命，希望每一位进入兰百合的学员都能“改变人生，做自信女人！”
@@ -80,7 +88,8 @@
         2017年12月，兰百合被湖南省家庭服务协会评为诚信服务先进单位。
         <br>
         <br>
-        公司始终坚持<span class='focus-text'>“为广大女性提供更多就业机会，为更多家庭提供专业高品质服务”</span>为使命，希望每一位进入兰百合的学员都能<span class='focus-text'>“改变人生，做自信女人！”</span>
+        公司始终坚持<span class='focus-text'>“为广大女性提供更多就业机会，为更多家庭提供专业高品质服务”</span>为使命，希望每一位进入兰百合的学员都能<span
+          class='focus-text'>“改变人生，做自信女人！”</span>
         <br>
         <br>
         <img src="{pboot:sitetplpath}/images/us-01.jpg" alt="" class='us-edit-img full-img'>
@@ -94,8 +103,10 @@
         </div>
       </div>
     </div>
-    <!-- 地图和联系方式 -->
-    <div class="address-box">
+  </div>
+  <!-- 地图和联系方式 -->
+  <div class="address-box">
+    <div class="container">
       <div class="address-img layui-hide-xs">
 
       </div>

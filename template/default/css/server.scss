@@ -12,7 +12,7 @@ $cff: #ffffff;
   float: left;
 }
 html{
-  font-size: 80px;
+  font-size: 83px;
 }
 body {
   padding-top: rem(150);
@@ -137,10 +137,6 @@ img {
     }
   }
 }
-.container {
-  max-width: rem(1366);
-  margin: 0 auto;
-}
 .server-banner-box{
   height: rem(200);
   position: relative;
@@ -161,8 +157,13 @@ img {
 }
 .server-container{
   background-color: #f6f7f8;
-  padding: rem(80) rem(160);
-  font-size: 0;
+  .server-padding-box{
+    max-width: rem(1366);
+    margin: 0 auto;
+    padding: rem(80) rem(160);
+    font-size: 0;
+    box-sizing: border-box;
+  }
   .server-nav{
       display: inline-block;
       margin-right: rem(60);
@@ -195,15 +196,26 @@ img {
     display: inline-block;
     width: rem(840);
     vertical-align: top;
-    padding: rem(22) 0  0  rem(22);
+    padding: 0 0  0  rem(22);
     box-sizing: border-box;
     .server-text-box{
+      height: rem(656);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-top:rem(22);
       vertical-align: top;
-      margin-right: rem(25);
+      margin-right: rem(23);
       width: rem(353);
       display: inline-block;
+      padding-bottom: rem(22);
     }
     p.server-detail{
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 20;
+      overflow: hidden;
+      height: rem(550);
+      text-overflow: ellipsis;
       margin-top: rem(15);
       color:#666666;
       line-height: rem(28);
@@ -221,12 +233,49 @@ img {
       }
     }
     .server-img{
+      vertical-align: top;
       width: rem(440);
       display: inline-block;
       height: rem(656);
-      background: url('../images/server-detail-01.jpg') 0 0 no-repeat;
       background-size: cover;
       position: relative;
+      background: url("../images/server-detail-01.jpg") 0 0 no-repeat;
+      &.baomu{
+        background: url('../images/server-detail-01.jpg') 0 0 no-repeat;
+        background-size: cover;
+      }
+      &.hugong{
+        background: url('https://0.rc.xiniu.com/g2/M00/0F/DF/CgAGe1xIPGiAYIkPAANxAoQHA-4090.png') 0 0 no-repeat;
+        background-size: cover;
+      }
+      &.baojie{
+        background: url('https://0.rc.xiniu.com/g2/M00/0F/DF/CgAGe1xIPGiAYIkPAANxAoQHA-4090.png') 0 0 no-repeat;
+        background-size: cover;
+      }
+      &.yuesao{
+        background: url('https://0.rc.xiniu.com/g2/M00/0F/DF/CgAGe1xIPGiAYIkPAANxAoQHA-4090.png') 0 0 no-repeat;
+        background-size: cover;
+      }
+      &.cuirushi{
+        background: url('https://0.rc.xiniu.com/g2/M00/0F/DF/CgAGe1xIPGiAYIkPAANxAoQHA-4090.png') 0 0 no-repeat;
+        background-size: cover;
+      }
+      &.yuyinshi{
+        background: url('../images/server-detail-01.jpg') 0 0 no-repeat;
+        background-size: cover;
+      }
+      &.qwzl{
+        background: url('../images/server-detail-01.jpg') 0 0 no-repeat;
+        background-size: cover;
+      }
+      &.srdz{
+        background: url('../images/server-detail-01.jpg') 0 0 no-repeat;
+        background-size: cover;
+      }
+      &.swjz{
+        background: url('../images/server-detail-01.jpg') 0 0 no-repeat;
+        background-size: cover;
+      }
       .icon-server{
         width: rem(78);
         height: rem(90);
