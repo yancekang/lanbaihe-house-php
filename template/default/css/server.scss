@@ -208,6 +208,7 @@ img {
       width: rem(353);
       display: inline-block;
       padding-bottom: rem(22);
+      box-sizing: border-box;
     }
     p.server-detail{
       display: -webkit-box;
