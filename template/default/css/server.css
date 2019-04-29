@@ -238,6 +238,7 @@ img {
   width: 3.53rem;
   display: inline-block;
   padding-bottom: 0.22rem;
+  box-sizing: border-box;
 }
 
 .server-container .server-content p.server-detail {
