@@ -609,7 +609,7 @@ img {
 .teacher-box .teacher-content .teacher-item .teacher-info .t-text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 5;
   font-size: 0.16rem;
   font-family: PingFangSC-Regular;
   font-weight: 400;
@@ -617,7 +617,8 @@ img {
   padding: 0 0.14rem;
   margin-bottom: 0.3rem;
   text-align: left;
-  height: 117px;
+  text-overflow: ellipsis;
+  line-height: 0.3rem;
   overflow: hidden;
 }
 
@@ -711,6 +712,7 @@ img {
   left: 50%;
   top: -0.4rem;
   transform: translateX(-50%);
+  object-fit: cover;
 }
 
 .student-box .student-content .student-item .student-card .student-info {
