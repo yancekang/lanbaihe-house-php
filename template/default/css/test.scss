@@ -527,15 +527,15 @@ img {
           padding: rem(20) 0 rem(18);
         }
         .t-text{
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 5;
+          // display: -webkit-box;
+          // -webkit-box-orient: vertical;
+          // -webkit-line-clamp: 5;
           font-size: rem(16);
           font-family: PingFangSC-Regular;
           font-weight: 400;
           color: white;
           padding: 0 rem(14);
-          margin-bottom:rem(30);
+          margin-bottom:rem(28);
           text-align: left;
           //height: rem(140);
           text-overflow: ellipsis;
