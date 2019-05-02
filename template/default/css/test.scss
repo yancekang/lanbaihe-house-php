@@ -505,7 +505,7 @@ img {
       img{
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
       }
       &:last-child{
         margin-right: 0;
@@ -529,7 +529,7 @@ img {
         .t-text{
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 6;
+          -webkit-line-clamp: 5;
           font-size: rem(16);
           font-family: PingFangSC-Regular;
           font-weight: 400;
@@ -537,7 +537,9 @@ img {
           padding: 0 rem(14);
           margin-bottom:rem(30);
           text-align: left;
-          height: 117px;
+          //height: rem(140);
+          text-overflow: ellipsis;
+          line-height: rem(30);
           overflow: hidden;
         }
         .t-btn{
@@ -622,6 +624,7 @@ img {
           left: 50%;
           top:rem(-40);
           transform: translateX(-50%);
+          object-fit: cover;
         }
         .student-info{
           padding: rem(48) rem(12) 0;
