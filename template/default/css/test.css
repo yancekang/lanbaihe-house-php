@@ -607,15 +607,12 @@ img {
 }
 
 .teacher-box .teacher-content .teacher-item .teacher-info .t-text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
   font-size: 0.16rem;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: white;
   padding: 0 0.14rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.28rem;
   text-align: left;
   text-overflow: ellipsis;
   line-height: 0.3rem;
