@@ -16,6 +16,10 @@
     var carousel = layui.carousel,
       element = layui.element,
       $ = layui.$
+      setTimeout(function(){
+       console.log(1)
+       $('#serverClick').click()
+      },200)
     var is_mobile =navigator.userAgent.toLowerCase().match(/(ipod|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) !== null;    //进行userAgent匹配
     if(is_mobile){
       //建造实例
@@ -78,15 +82,10 @@
     }
   }
   wordlimit("t-text",62);
-  $(document).ready(function(){
-    setTimeout(function(){
-      $('#serverClick').click()
-    },200)
-  });
 </script>
+<script src='{pboot:sitetplpath}/js/server-page.js'></script>
 <script type="text/javascript"  src="{pboot:sitetplpath}/ckplayer/ckplayer.js"></script>
 <script src='{pboot:sitetplpath}/js/video.js'></script>
-<script src='{pboot:sitetplpath}/js/server-page.js'></script>
 </body>
 
 </html>
