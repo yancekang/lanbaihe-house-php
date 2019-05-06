@@ -11,78 +11,78 @@
 </footer>
 <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
 <script src="{pboot:sitetplpath}/layui/layui.js"></script>
-<script type="text/javascript" src="{pboot:sitetplpath}/ckplayer/ckplayer.js"></script>
 <script>
-    layui.use(['element', 'carousel', 'jquery'], function () {
-      var carousel = layui.carousel,
-        element = layui.element,
-        $ = layui.$
-      var is_mobile =navigator.userAgent.toLowerCase().match(/(ipod|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) !== null;    //进行userAgent匹配
-      if(is_mobile){
-        //建造实例
-        carousel.render({
-          elem: '#carousel'
-          , width: '100%' //设置容器宽度
-          , height: '6rem',
-          //,anim: 'updown' //切换动画方式
-        });
-        $('.teacher-item').addClass('layui-col-xs6')
-      }else{
-        //建造实例
-        carousel.render({
-          elem: '#carousel'
-          , width: '100%' //设置容器宽度
-          , height: '4rem'
-          ,arrow:'hover'
-          
-          //,anim: 'updown' //切换动画方式
-        });
-      }
-      $(".teacher-item").hover(function () {
-        $(this).find('.teacher-info').addClass("layui-anim layui-anim-upbit");
-      }, function () {
-        $(this).find('.teacher-info').removeClass("layui-anim layui-anim-upbit");
+  layui.use(['element', 'carousel', 'jquery'], function () {
+    var carousel = layui.carousel,
+      element = layui.element,
+      $ = layui.$
+    var is_mobile =navigator.userAgent.toLowerCase().match(/(ipod|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) !== null;    //进行userAgent匹配
+    if(is_mobile){
+      //建造实例
+      carousel.render({
+        elem: '#carousel'
+        , width: '100%' //设置容器宽度
+        , height: '6rem',
+        //,anim: 'updown' //切换动画方式
       });
-      // 底部学员hover动画高度处理
-      $(".student-item").hover(function () {
-        $(this).find('.student-info .student-text').delay(330).fadeIn('fast').css('height','1rem')
-      }, function () {
-        $(this).find('.student-info .student-text').css('height','0.3rem').fadeOut(500)
+      $('.teacher-item').addClass('layui-col-xs6')
+    }else{
+      //建造实例
+      carousel.render({
+        elem: '#carousel'
+        , width: '100%' //设置容器宽度
+        , height: '4rem'
+        ,arrow:'hover'
+        
+        //,anim: 'updown' //切换动画方式
       });
-        //导航切换
-      var btn = $('.mobile-nav').children('button')
-      ,spa = btn.children('span')
-      ,ul = $('.top-box').children('.layui-nav');
-      btn.on('click', function(){
-        if(!$(spa[0]).hasClass('spa1')){
-          spa[0].className = 'spa1';
-          spa[1].style.display = 'none';
-          spa[2].className = 'spa3';
-          $('.top-box')[0].style.height = 80 + ul[0].offsetHeight + 'px';
-        }else{
-          spa[0].className = '';
-          spa[1].style.display = 'block';
-          spa[2].className = '';
-          $('.top-box')[0].style.height = 70 + 'px';
-        }
-      });
-    });
-    setTimeout(function(){
-      $('#serverClick').click()
-    },200)
-    function wordlimit(cname,wordlength){                  //参数分别为：类名，要显示的字符串长度
-      var cname=document.getElementsByClassName(cname);  //需要加省略符号的元素对象
-      console.log(cname)
-      for(var i=0;i<cname.length;i++){　　　　　　　　　　　
-        var nowhtml=cname[i].innerHTML;                //元素的内容
-          var nowlength=cname[i].innerHTML.length;      //元素文本的长度
-          if(nowlength>wordlength){
-              cname[i].innerHTML=nowhtml.substr(0,wordlength)+'...';      //截取元素的文本的长度并加上省略号
-          }
-      }
     }
-    wordlimit("t-text",62);
+    $(".teacher-item").hover(function () {
+      $(this).find('.teacher-info').addClass("layui-anim layui-anim-upbit");
+    }, function () {
+      $(this).find('.teacher-info').removeClass("layui-anim layui-anim-upbit");
+    });
+    // 底部学员hover动画高度处理
+    $(".student-item").hover(function () {
+      $(this).find('.student-info .student-text').delay(330).fadeIn('fast').css('height','1rem')
+    }, function () {
+      $(this).find('.student-info .student-text').css('height','0.3rem').fadeOut(500)
+    });
+      //导航切换
+    var btn = $('.mobile-nav').children('button')
+    ,spa = btn.children('span')
+    ,ul = $('.top-box').children('.layui-nav');
+    btn.on('click', function(){
+      if(!$(spa[0]).hasClass('spa1')){
+        spa[0].className = 'spa1';
+        spa[1].style.display = 'none';
+        spa[2].className = 'spa3';
+        $('.top-box')[0].style.height = 80 + ul[0].offsetHeight + 'px';
+      }else{
+        spa[0].className = '';
+        spa[1].style.display = 'block';
+        spa[2].className = '';
+        $('.top-box')[0].style.height = 70 + 'px';
+      }
+    });
+  });
+  setTimeout(function(){
+    $('#serverClick').click()
+  },500)
+  function wordlimit(cname,wordlength){                  //参数分别为：类名，要显示的字符串长度
+    var cname=document.getElementsByClassName(cname);  //需要加省略符号的元素对象
+    console.log(cname)
+    for(var i=0;i<cname.length;i++){　　　　　　　　　　　
+      var nowhtml=cname[i].innerHTML;                //元素的内容
+        var nowlength=cname[i].innerHTML.length;      //元素文本的长度
+        if(nowlength>wordlength){
+            cname[i].innerHTML=nowhtml.substr(0,wordlength)+'...';      //截取元素的文本的长度并加上省略号
+        }
+    }
+  }
+  wordlimit("t-text",62);
 </script>
+<script type="text/javascript"  src="{pboot:sitetplpath}/ckplayer/ckplayer.js"></script>
 <script src='{pboot:sitetplpath}/js/video.js'></script>
 <script src='{pboot:sitetplpath}/js/server-page.js'></script>
 </body>

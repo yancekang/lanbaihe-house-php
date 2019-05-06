@@ -12,7 +12,7 @@ $cff: #ffffff;
   float: left;
 }
 html{
-  font-size: 83px;
+  font-size: 80px;
 }
 body {
   padding-top: rem(150);
@@ -331,7 +331,7 @@ img {
   padding-bottom: rem(70);
   .server-tab{
     box-sizing: border-box;
-    padding: rem(30) rem(64) rem(44);
+    padding: rem(30) rem(62) rem(44);
     margin: rem(85) auto 0;
     width:rem(1046);
     height:rem(524);
@@ -373,7 +373,7 @@ img {
         width: rem(260);
         height: rem(380);
         margin-right: rem(68);
-        display: inline-block;
+        float:left;
         &:last-child{
           margin-right: 0
         }

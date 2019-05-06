@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 83px;
+  font-size: 80px;
 }
 
 body {
@@ -375,7 +375,7 @@ img {
 
 .server-box .server-tab {
   box-sizing: border-box;
-  padding: 0.3rem 0.64rem 0.44rem;
+  padding: 0.3rem 0.62rem 0.44rem;
   margin: 0.85rem auto 0;
   width: 10.46rem;
   height: 5.24rem;
@@ -427,7 +427,7 @@ img {
   width: 2.6rem;
   height: 3.8rem;
   margin-right: 0.68rem;
-  display: inline-block;
+  float: left;
 }
 
 .server-box .server-tab .item-box .server-item-info:last-child {
