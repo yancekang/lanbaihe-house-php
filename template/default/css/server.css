@@ -366,3 +366,157 @@ footer .layui-breadcrumb a:hover {
     margin-right: 0.3rem;
   }
 }
+
+.server-container .server-nav-new {
+  text-align: center;
+  padding: 1.1rem 0 1rem;
+  background-color: #ffffff;
+}
+
+.server-container .server-nav-new .server-nav-item-box {
+  font-size: 0;
+}
+
+.server-container .server-nav-new .server-nav-item-box.second-box {
+  margin-top: -0.34rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .block-box {
+  display: inline-block;
+  width: 0.55rem;
+  background-color: red;
+  height: 1px;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item {
+  border-radius: 0.04rem;
+  display: inline-block;
+  position: relative;
+  width: 1.385rem;
+  height: 1.385rem;
+  margin-right: 0.11rem;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item.active .bg-box {
+  background-color: rgba(164, 55, 150, 0.3);
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .bg-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(164, 55, 150, 0.8);
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item:last-child {
+  margin-right: 0;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-img {
+  transform: rotate(-45deg) scale(1.42);
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box {
+  z-index: 2;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon {
+  margin-bottom: 0.02rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon.icon-1 {
+  width: 0.26rem;
+  height: 0.39rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon.icon-2 {
+  width: 0.39rem;
+  height: 0.39rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon.icon-3 {
+  width: 0.36rem;
+  height: 0.37rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon.icon-4 {
+  width: 0.39rem;
+  height: 0.36rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon.icon-5 {
+  width: 0.37rem;
+  height: 0.38rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon.icon-6 {
+  width: 0.4rem;
+  height: 0.34rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon.icon-7 {
+  width: 0.32rem;
+  height: 0.39rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon.icon-8 {
+  width: 0.3rem;
+  height: 0.36rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box img.item-icon.icon-9 {
+  width: 0.26rem;
+  height: 0.39rem;
+}
+
+.server-container .server-nav-new .server-nav-item-box .nav-item p.item-name {
+  font-size: 0.22rem;
+  color: #ffffff;
+}
+
+.server-container .server-detail-box {
+  background-color: #F6EBF4;
+  padding-top: 0.48rem;
+  box-sizing: border-box;
+}
+
+.server-container .server-detail-box.yuesao {
+  padding-bottom: 2.18rem;
+}
+
+.server-container .server-detail-box .server-detail-title {
+  font-size: 0.3rem;
+  color: #333;
+  text-align: center;
+}
+
+.server-container .server-detail-box .yuesao-detail-container {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 0.3rem 0.26rem 0.8rem;
+  max-width: 10.06rem;
+  margin: 0 auto;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .layui-table {
+  color: #333;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .layui-table thead tr {
+  background-color: #fff;
+}
