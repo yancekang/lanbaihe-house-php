@@ -328,15 +328,14 @@ footer {
     .server-nav-item-box{
       font-size: 0;
       &.second-box{
-        margin-top: rem(-34)
+        margin-top: rem(-32)
       }
       .block-box {
         display: inline-block;
         width: rem(55);
-        background-color: red;
-        height: 1px;
       }
       .nav-item{
+        cursor: pointer;
         border-radius: rem(4);
         display: inline-block;
         position: relative;
@@ -357,14 +356,14 @@ footer {
           right: 0;
           bottom: 0;
           z-index: 1;
-          background-color: rgba(164,55,150,0.8);
+          background-color: rgba(164,55,150,0.9);
         }
         &:last-child{
           margin-right: 0;
         }
         .item-img{
           //object-fit: cover;
-          transform: rotate(-45deg) scale(1.42);
+          transform: rotate(-45deg) scale(2.7);
         }
         .item-info-box{
           z-index: 2;
@@ -440,11 +439,43 @@ footer {
     .yuesao-detail-container{
       box-sizing: border-box;
       background-color: $cff;
-      padding: rem(30) rem(26) rem(80);
+      padding: rem(30) rem(0) rem(52) rem(28);
       max-width: rem(1006);
+      width: rem(1006);
       margin: 0 auto;
+      .server-detail-title{
+        margin-bottom: rem(65);
+      }
       .layui-table{
         color: #333;
+        margin: 0 auto;
+        .pl-td{
+          padding-left: rem(20);
+          box-sizing: border-box;
+        }
+        tbody tr:hover{
+          background-color: $cff;
+        }
+        th{
+          font-size: rem(20);
+          padding: 0;
+          &.server-tablie-title{
+            padding-right: rem(33);
+          }
+        }
+        td{
+          font-size: rem(20);
+          padding: 0;
+          &.money-td{
+            color:#A53297;
+          }
+          &.server-detail-container{
+            font-size: rem(14);
+            // padding-right: rem(33);
+            padding:rem(28) rem(33) rem(28) 0;
+            box-sizing: border-box;
+          }
+        }
       }
       .layui-table thead tr{
         background-color: #fff;

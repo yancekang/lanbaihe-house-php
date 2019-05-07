@@ -378,17 +378,16 @@ footer .layui-breadcrumb a:hover {
 }
 
 .server-container .server-nav-new .server-nav-item-box.second-box {
-  margin-top: -0.34rem;
+  margin-top: -0.32rem;
 }
 
 .server-container .server-nav-new .server-nav-item-box .block-box {
   display: inline-block;
   width: 0.55rem;
-  background-color: red;
-  height: 1px;
 }
 
 .server-container .server-nav-new .server-nav-item-box .nav-item {
+  cursor: pointer;
   border-radius: 0.04rem;
   display: inline-block;
   position: relative;
@@ -410,7 +409,7 @@ footer .layui-breadcrumb a:hover {
   right: 0;
   bottom: 0;
   z-index: 1;
-  background-color: rgba(164, 55, 150, 0.8);
+  background-color: rgba(164, 55, 150, 0.9);
 }
 
 .server-container .server-nav-new .server-nav-item-box .nav-item:last-child {
@@ -418,7 +417,7 @@ footer .layui-breadcrumb a:hover {
 }
 
 .server-container .server-nav-new .server-nav-item-box .nav-item .item-img {
-  transform: rotate(-45deg) scale(1.42);
+  transform: rotate(-45deg) scale(2.7);
 }
 
 .server-container .server-nav-new .server-nav-item-box .nav-item .item-info-box {
@@ -508,13 +507,52 @@ footer .layui-breadcrumb a:hover {
 .server-container .server-detail-box .yuesao-detail-container {
   box-sizing: border-box;
   background-color: #ffffff;
-  padding: 0.3rem 0.26rem 0.8rem;
+  padding: 0.3rem 0rem 0.52rem 0.28rem;
   max-width: 10.06rem;
+  width: 10.06rem;
   margin: 0 auto;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .server-detail-title {
+  margin-bottom: 0.65rem;
 }
 
 .server-container .server-detail-box .yuesao-detail-container .layui-table {
   color: #333;
+  margin: 0 auto;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .layui-table .pl-td {
+  padding-left: 0.2rem;
+  box-sizing: border-box;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .layui-table tbody tr:hover {
+  background-color: #ffffff;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .layui-table th {
+  font-size: 0.2rem;
+  padding: 0;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .layui-table th.server-tablie-title {
+  padding-right: 0.33rem;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .layui-table td {
+  font-size: 0.2rem;
+  padding: 0;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .layui-table td.money-td {
+  color: #A53297;
+}
+
+.server-container .server-detail-box .yuesao-detail-container .layui-table td.server-detail-container {
+  font-size: 0.14rem;
+  padding: 0.28rem 0.33rem 0.28rem 0;
+  box-sizing: border-box;
 }
 
 .server-container .server-detail-box .yuesao-detail-container .layui-table thead tr {
